@@ -14,9 +14,9 @@ define monit::process(
     notify  => Class['monit::service'],
   }
 
-  exec {"monit_#{name}":
-    command     => "/usr/bin/monit restart ${name}",
-    refreshonly => true,
+  service {$name:
+    ensure   => $ensure,
+    provider => monit,
   }
 
 }
