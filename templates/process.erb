@@ -1,18 +1,3 @@
 check process <%= @name %> with pidfile <%= @pidfile %>
   start program = "<%= @start_command %>" with timeout 60 seconds
   stop program  = "<%= @stop_command %>"
-#    if cpu > 60% for 2 cycles then alert
-#    if cpu > 80% for 5 cycles then restart
-#    if totalmem > 200.0 MB for 5 cycles then restart
-#    if children > 250 then restart
-#    if loadavg(5min) greater than 10 for 8 cycles then stop
-#    if failed host www.tildeslash.com port 80 protocol http 
-#       and request "/somefile.html"
-#       then restart
-#    if failed port 443 type tcpssl protocol http
-#       with timeout 15 seconds
-#       then restart
-#    if 3 restarts within 5 cycles then timeout
-#    depends on apache_bin
-#    group server
-
