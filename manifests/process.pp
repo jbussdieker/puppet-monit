@@ -16,7 +16,8 @@ define monit::process(
 
   service {$name:
     ensure   => $ensure,
-    provider => monit,
+    provider => 'monit',
+    require  => Service['monit'],
   }
 
 }
