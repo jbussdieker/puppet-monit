@@ -12,6 +12,8 @@ define monit::process(
     group   => 'root',
     content => template('monit/process.erb'),
     notify  => Class['monit::service'],
+    require => Class['monit::package'],
+    before  => Service[$name],
   }
 
   service {$name:
