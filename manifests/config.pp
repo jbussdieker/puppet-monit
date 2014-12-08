@@ -1,4 +1,6 @@
-class monit::config {
+class monit::config(
+  $interval = 120,
+) {
 
   file {'/etc/monit/monitrc':
     ensure  => present,
