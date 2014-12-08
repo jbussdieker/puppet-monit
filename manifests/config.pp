@@ -1,5 +1,6 @@
 class monit::config(
   $interval = 120,
+  $httpd    = false,
 ) {
 
   file {'/etc/monit/monitrc':
