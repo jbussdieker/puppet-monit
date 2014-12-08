@@ -4,7 +4,7 @@ define monit::process(
   $start_command,
   $stop_command) {
 
-  include monit
+  #include monit
 
   file {"/etc/monit/conf.d/${name}":
     ensure  => present,
