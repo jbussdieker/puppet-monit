@@ -9,7 +9,7 @@ describe 'monit::process' do
     :pidfile => 'pidfile',
   } }
 
-  let(:facts) { { :osfamily => 'debian' } }
+  let(:facts) { { :osfamily => 'Debian' } }
   let(:filename) { "/etc/monit/conf.d/#{title}" }
 
   describe 'configuration file debian' do
@@ -34,7 +34,7 @@ describe 'monit::process' do
     end
   end
 
-  let(:facts) { { :osfamily => 'redhat' } }
+  let(:facts) { { :osfamily => 'RedHat' } }
   let(:filename) { "/etc/monit.d/#{title}" }
 
   describe 'configuration file redhat' do

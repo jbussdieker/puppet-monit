@@ -18,7 +18,7 @@ define monit::process(
   $stop_command
 ) {
 
-  #include monit
+  include monit
   $servicep = $::monit::params::servicep
   $included = $::monit::params::included
 
