@@ -20,7 +20,7 @@ $basedir = $::monit::params::basedir
     ensure  => present,
     owner   => 'root',
     group   => 'root',
-    mode    => 0600,
+    mode    => '0600',
     content => template('monit/monitrc.erb'),
   }
 
