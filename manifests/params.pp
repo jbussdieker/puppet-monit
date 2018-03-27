@@ -6,7 +6,12 @@ class monit::params {
       $statefile  = '/var/.monit.state'
       $basedir    = '/var/monit'
       $included   = '/etc/monit.d'
-      $config     = '/etc/monit.conf'
+
+      if(versioncmp($::operatingsystemrelease, '7.0') >= 0)  {
+        $config = '/etc/monitrc'
+      } else {
+        $config = '/etc/monit.conf'
+      }
     }
     'Debian' : {
       $idfile     = '/var/lib/monit/id'
