@@ -9,7 +9,7 @@ Puppet::Type.type(:service).provide(:monit, :parent => Puppet::Provider) do
       if lines[0].strip == "Process '#{resource[:name]}'"
         status = lines[1].split(" ")[1..-1].join(" ")
         return :stopped if status == "Not monitored"
-        return :running if status == "Running"
+        return :running if status == "Running" or status == "OK"
       end
     end
     nil
