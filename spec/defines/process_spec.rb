@@ -34,7 +34,7 @@ describe 'monit::process' do
     end
   end
 
-  let(:facts) { { :osfamily => 'RedHat' } }
+  let(:facts) { { :osfamily => 'RedHat', :operatingsystemrelease => '7.0' } }
   let(:filename) { "/etc/monit.d/#{title}" }
 
   describe 'configuration file redhat' do
